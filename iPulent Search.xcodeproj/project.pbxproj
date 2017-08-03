@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B38B5221F33952B001D8205 /* iTunesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38B5211F33952B001D8205 /* iTunesResult.swift */; };
 		1BC7FA1E1F32CF0000702713 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA1D1F32CF0000702713 /* AppDelegate.swift */; };
 		1BC7FA251F32CF0000702713 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7FA241F32CF0000702713 /* Assets.xcassets */; };
-		1BC7FA281F32CF0000702713 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7FA261F32CF0000702713 /* LaunchScreen.storyboard */; };
 		1BC7FA331F32CF0000702713 /* iPulent_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA321F32CF0000702713 /* iPulent_SearchTests.swift */; };
 		1BC7FA3E1F32CF0000702713 /* iPulent_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA3D1F32CF0000702713 /* iPulent_SearchUITests.swift */; };
 		1BC7FA4D1F32CFBA00702713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7FA4C1F32CFBA00702713 /* Main.storyboard */; };
+		1BC7FA511F32D17300702713 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA501F32D17300702713 /* SearchViewController.swift */; };
+		1BC7FA531F32D19A00702713 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA521F32D19A00702713 /* AlbumViewController.swift */; };
+		1BC7FA561F32D89200702713 /* iTunesAPIConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA551F32D89200702713 /* iTunesAPIConnection.swift */; };
+		1BC7FA591F32DB7900702713 /* iTunesSearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA581F32DB7900702713 /* iTunesSearchItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B38B5211F33952B001D8205 /* iTunesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesResult.swift; sourceTree = "<group>"; };
 		1BC7FA1A1F32CF0000702713 /* iPulent Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iPulent Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC7FA1D1F32CF0000702713 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BC7FA241F32CF0000702713 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1BC7FA271F32CF0000702713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BC7FA291F32CF0000702713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BC7FA2E1F32CF0000702713 /* iPulent SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iPulent SearchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC7FA321F32CF0000702713 /* iPulent_SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPulent_SearchTests.swift; sourceTree = "<group>"; };
@@ -45,6 +49,10 @@
 		1BC7FA3D1F32CF0000702713 /* iPulent_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPulent_SearchUITests.swift; sourceTree = "<group>"; };
 		1BC7FA3F1F32CF0000702713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BC7FA4C1F32CFBA00702713 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1BC7FA501F32D17300702713 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1BC7FA521F32D19A00702713 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		1BC7FA551F32D89200702713 /* iTunesAPIConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPIConnection.swift; sourceTree = "<group>"; };
+		1BC7FA581F32DB7900702713 /* iTunesSearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +103,11 @@
 		1BC7FA1C1F32CF0000702713 /* iPulent Search */ = {
 			isa = PBXGroup;
 			children = (
-				1BC7FA261F32CF0000702713 /* LaunchScreen.storyboard */,
+				1BC7FA571F32DB0500702713 /* Model */,
+				1BC7FA541F32D56B00702713 /* Util */,
 				1BC7FA4C1F32CFBA00702713 /* Main.storyboard */,
+				1BC7FA521F32D19A00702713 /* AlbumViewController.swift */,
+				1BC7FA501F32D17300702713 /* SearchViewController.swift */,
 				1BC7FA4B1F32CF4A00702713 /* Supporting Files */,
 			);
 			path = "iPulent Search";
@@ -123,11 +134,28 @@
 		1BC7FA4B1F32CF4A00702713 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1BC7FA291F32CF0000702713 /* Info.plist */,
 				1BC7FA1D1F32CF0000702713 /* AppDelegate.swift */,
 				1BC7FA241F32CF0000702713 /* Assets.xcassets */,
-				1BC7FA291F32CF0000702713 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BC7FA541F32D56B00702713 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				1BC7FA551F32D89200702713 /* iTunesAPIConnection.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		1BC7FA571F32DB0500702713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1BC7FA581F32DB7900702713 /* iTunesSearchItem.swift */,
+				1B38B5211F33952B001D8205 /* iTunesResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BC7FA4D1F32CFBA00702713 /* Main.storyboard in Resources */,
-				1BC7FA281F32CF0000702713 /* LaunchScreen.storyboard in Resources */,
 				1BC7FA251F32CF0000702713 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC7FA591F32DB7900702713 /* iTunesSearchItem.swift in Sources */,
+				1BC7FA531F32D19A00702713 /* AlbumViewController.swift in Sources */,
+				1BC7FA511F32D17300702713 /* SearchViewController.swift in Sources */,
+				1BC7FA561F32D89200702713 /* iTunesAPIConnection.swift in Sources */,
+				1B38B5221F33952B001D8205 /* iTunesResult.swift in Sources */,
 				1BC7FA1E1F32CF0000702713 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,17 +327,6 @@
 			targetProxy = 1BC7FA3A1F32CF0000702713 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		1BC7FA261F32CF0000702713 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1BC7FA271F32CF0000702713 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1BC7FA401F32CF0000702713 /* Debug */ = {
@@ -420,7 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PE96DV38QA;
-				INFOPLIST_FILE = "iPulent Search/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iPulent Search/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.me.riquelme.roberto.iPulent-Search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -434,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PE96DV38QA;
-				INFOPLIST_FILE = "iPulent Search/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iPulent Search/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.me.riquelme.roberto.iPulent-Search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
