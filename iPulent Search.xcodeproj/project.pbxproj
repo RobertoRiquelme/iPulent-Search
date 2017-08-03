@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1BC7FA1E1F32CF0000702713 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA1D1F32CF0000702713 /* AppDelegate.swift */; };
-		1BC7FA201F32CF0000702713 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA1F1F32CF0000702713 /* ViewController.swift */; };
-		1BC7FA231F32CF0000702713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7FA211F32CF0000702713 /* Main.storyboard */; };
 		1BC7FA251F32CF0000702713 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7FA241F32CF0000702713 /* Assets.xcassets */; };
 		1BC7FA281F32CF0000702713 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7FA261F32CF0000702713 /* LaunchScreen.storyboard */; };
 		1BC7FA331F32CF0000702713 /* iPulent_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA321F32CF0000702713 /* iPulent_SearchTests.swift */; };
 		1BC7FA3E1F32CF0000702713 /* iPulent_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA3D1F32CF0000702713 /* iPulent_SearchUITests.swift */; };
+		1BC7FA4D1F32CFBA00702713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7FA4C1F32CFBA00702713 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +35,6 @@
 /* Begin PBXFileReference section */
 		1BC7FA1A1F32CF0000702713 /* iPulent Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iPulent Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC7FA1D1F32CF0000702713 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BC7FA1F1F32CF0000702713 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1BC7FA221F32CF0000702713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BC7FA241F32CF0000702713 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BC7FA271F32CF0000702713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BC7FA291F32CF0000702713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +44,7 @@
 		1BC7FA391F32CF0000702713 /* iPulent SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iPulent SearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC7FA3D1F32CF0000702713 /* iPulent_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPulent_SearchUITests.swift; sourceTree = "<group>"; };
 		1BC7FA3F1F32CF0000702713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BC7FA4C1F32CFBA00702713 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +95,9 @@
 		1BC7FA1C1F32CF0000702713 /* iPulent Search */ = {
 			isa = PBXGroup;
 			children = (
-				1BC7FA1D1F32CF0000702713 /* AppDelegate.swift */,
-				1BC7FA1F1F32CF0000702713 /* ViewController.swift */,
-				1BC7FA211F32CF0000702713 /* Main.storyboard */,
-				1BC7FA241F32CF0000702713 /* Assets.xcassets */,
 				1BC7FA261F32CF0000702713 /* LaunchScreen.storyboard */,
-				1BC7FA291F32CF0000702713 /* Info.plist */,
+				1BC7FA4C1F32CFBA00702713 /* Main.storyboard */,
+				1BC7FA4B1F32CF4A00702713 /* Supporting Files */,
 			);
 			path = "iPulent Search";
 			sourceTree = "<group>";
@@ -123,6 +118,16 @@
 				1BC7FA3F1F32CF0000702713 /* Info.plist */,
 			);
 			path = "iPulent SearchUITests";
+			sourceTree = "<group>";
+		};
+		1BC7FA4B1F32CF4A00702713 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BC7FA1D1F32CF0000702713 /* AppDelegate.swift */,
+				1BC7FA241F32CF0000702713 /* Assets.xcassets */,
+				1BC7FA291F32CF0000702713 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +234,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC7FA4D1F32CFBA00702713 /* Main.storyboard in Resources */,
 				1BC7FA281F32CF0000702713 /* LaunchScreen.storyboard in Resources */,
 				1BC7FA251F32CF0000702713 /* Assets.xcassets in Resources */,
-				1BC7FA231F32CF0000702713 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +261,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BC7FA201F32CF0000702713 /* ViewController.swift in Sources */,
 				1BC7FA1E1F32CF0000702713 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +297,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1BC7FA211F32CF0000702713 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1BC7FA221F32CF0000702713 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1BC7FA261F32CF0000702713 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
