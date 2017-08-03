@@ -5,6 +5,7 @@
 //  Created by Roberto Riquelme on 8/3/17.
 //  Copyright © 2017 Roberto Riquelme. All rights reserved.
 //
+// Decided to go with native URLSession. Alamofire is a good alternative.
 
 import UIKit
 

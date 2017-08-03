@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sOB-wN-hvP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jaK-qR-pAS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,21 +9,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
-        <scene sceneID="4Ry-1X-85e">
+        <!--Search Table View Controller-->
+        <scene sceneID="XJY-63-VqN">
             <objects>
-                <viewController id="3PL-IN-zjT" customClass="SearchViewController" customModule="iPulent_Search" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VrE-fV-fpb">
+                <tableViewController id="8nA-An-o2k" customClass="SearchTableViewController" customModule="iPulent_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jMz-qi-kCB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="5eT-yi-CYH"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="RSO-LU-Bne"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Buv-be-hWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="etm-8V-kvr">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="etm-8V-kvr" id="uEK-Ax-yq9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8nA-An-o2k" id="12a-eq-zBR"/>
+                            <outlet property="delegate" destination="8nA-An-o2k" id="LIE-1g-WXk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ujK-9M-3Fx"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaB-ag-CJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334" y="134"/>
+            <point key="canvasLocation" x="716" y="133.5832083958021"/>
         </scene>
         <!--Album View Controller-->
         <scene sceneID="0J8-CU-Vt5">
@@ -38,25 +51,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXQ-mQ-foq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127.2" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1466.4000000000001" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="IPp-3r-ISe">
+        <scene sceneID="pR8-jq-z10">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sOB-wN-hvP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jaK-qR-pAS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t8W-u1-bxs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XKl-hv-evh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="3PL-IN-zjT" kind="relationship" relationship="rootViewController" id="aqx-kT-p2s"/>
+                        <segue destination="8nA-An-o2k" kind="relationship" relationship="rootViewController" id="Af2-KW-h4J"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8IY-gv-ggT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJa-UZ-8eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-410" y="134"/>
+            <point key="canvasLocation" x="-60" y="134"/>
         </scene>
     </scenes>
 </document>
