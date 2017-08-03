@@ -11,11 +11,28 @@ import UIKit
 class SearchTableViewController: UITableViewController {
 
     // Define the MODEL
-    var searchResult = iTunesResults(resultCount:0,results:[])
+    private var searchResult = iTunesResults(resultCount:0,results:[])
+    var searchText: String?{
+        didSet{
+            //clear results
+            tableView.reloadData()
+            // search again
+            title = searchText
+        }
+    }
+    
+    private func searchRequest() {
+        if let query = searchText, !query.isEmpty{
+            iTunesAPIConnection.instance.doSearch(for: query){ items in
+                self.searchResult = items
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        iTunesAPIConnection.instance.doSearch(){ items in
+        title = "HELLO"
+        iTunesAPIConnection.instance.doSearch(for: "Metallica"){ items in
             self.searchResult = items
             print(self.searchResult)
         }

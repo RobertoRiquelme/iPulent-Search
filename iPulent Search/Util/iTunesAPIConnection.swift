@@ -12,11 +12,19 @@ import UIKit
 class iTunesAPIConnection{
     
     static let instance = iTunesAPIConnection()
-    private let baseURL = "https://itunes.apple.com/search?term=in+utero&mediaType=music&limit=20"
+    private let baseURL = "https://itunes.apple.com/search?"
+    private let limit = 20
+    private let mediaType = "music"
     
-    func doSearch(completion: @escaping (iTunesResults) -> ()) {
+    
+    func doSearch(for query: String, completion: @escaping (iTunesResults) -> ()) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        if let url = URL(string: baseURL) {
+        let queryTerm = "term=\(query)"
+        let queryMedia = "mediaType=\(mediaType)"
+        let queryLimit = "limit=\(limit)"
+        
+        
+        if let url = URL(string: "\(baseURL)\(queryTerm)&\(queryMedia)&\(queryLimit)") {
             URLSession.shared.invalidateAndCancel()
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 var result = iTunesResults(resultCount: 0, results: [])

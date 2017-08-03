@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        iTunesAPIConnection.instance.doSearch(){ items in
+        iTunesAPIConnection.instance.doSearch(for: "Metallica"){ items in
             self.searchResult = items
             print(self.searchResult)
         }
