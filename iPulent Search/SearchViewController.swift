@@ -10,9 +10,14 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    var searchResult = iTunesResults(resultCount:0,results:[])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        try! iTunesAPIConnection.instance.doSearch()
+        iTunesAPIConnection.instance.doSearch(){ items in
+            self.searchResult = items
+            print(self.searchResult)
+        }
         // Do any additional setup after loading the view.
     }
 
