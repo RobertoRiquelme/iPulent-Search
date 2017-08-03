@@ -21,7 +21,15 @@ class iTunesAPIConnection{
                 var result = iTunesResults(resultCount: 0, results: [])
                 if error != nil {
                     print(error.debugDescription)
+                    //TODO: Connection error
+                    return
                 } else {
+                    if let response = response as? HTTPURLResponse {
+                        if response.statusCode != 200 {
+                            print("HTTPERROR: \(response.statusCode)")
+                            //TODO: Define what to do here
+                        }
+                    }
                     if let usableData = data {
                         do{
                             result =  try JSONDecoder().decode(iTunesResults.self, from: usableData)
@@ -29,6 +37,7 @@ class iTunesAPIConnection{
                             print(error)
                         }
                     }
+                    
                 }
                 
                 DispatchQueue.main.async(execute: {
