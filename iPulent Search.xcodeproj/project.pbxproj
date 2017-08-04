@@ -13,7 +13,6 @@
 		1BC7FA331F32CF0000702713 /* iPulent_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA321F32CF0000702713 /* iPulent_SearchTests.swift */; };
 		1BC7FA3E1F32CF0000702713 /* iPulent_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA3D1F32CF0000702713 /* iPulent_SearchUITests.swift */; };
 		1BC7FA4D1F32CFBA00702713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7FA4C1F32CFBA00702713 /* Main.storyboard */; };
-		1BC7FA511F32D17300702713 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA501F32D17300702713 /* SearchViewController.swift */; };
 		1BC7FA531F32D19A00702713 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA521F32D19A00702713 /* AlbumViewController.swift */; };
 		1BC7FA561F32D89200702713 /* iTunesAPIConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA551F32D89200702713 /* iTunesAPIConnection.swift */; };
 		1BC7FA591F32DB7900702713 /* iTunesSearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA581F32DB7900702713 /* iTunesSearchItem.swift */; };
@@ -51,7 +50,6 @@
 		1BC7FA3D1F32CF0000702713 /* iPulent_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPulent_SearchUITests.swift; sourceTree = "<group>"; };
 		1BC7FA3F1F32CF0000702713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BC7FA4C1F32CFBA00702713 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		1BC7FA501F32D17300702713 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1BC7FA521F32D19A00702713 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		1BC7FA551F32D89200702713 /* iTunesAPIConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPIConnection.swift; sourceTree = "<group>"; };
 		1BC7FA581F32DB7900702713 /* iTunesSearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchItem.swift; sourceTree = "<group>"; };
@@ -84,6 +82,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B34B9C11F34BDBE000EDCBA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1BF2CA5F1F33CA6400D588A0 /* SearchTableViewController.swift */,
+				1BF2CA611F34102600D588A0 /* ResultTableViewCell.swift */,
+				1BC7FA521F32D19A00702713 /* AlbumViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1B34B9C21F34BDE1000EDCBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1BC7FA4C1F32CFBA00702713 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1BC7FA111F32CEFF00702713 = {
 			isa = PBXGroup;
 			children = (
@@ -109,11 +125,8 @@
 			children = (
 				1BC7FA571F32DB0500702713 /* Model */,
 				1BC7FA541F32D56B00702713 /* Util */,
-				1BC7FA4C1F32CFBA00702713 /* Main.storyboard */,
-				1BF2CA5F1F33CA6400D588A0 /* SearchTableViewController.swift */,
-				1BF2CA611F34102600D588A0 /* ResultTableViewCell.swift */,
-				1BC7FA521F32D19A00702713 /* AlbumViewController.swift */,
-				1BC7FA501F32D17300702713 /* SearchViewController.swift */,
+				1B34B9C21F34BDE1000EDCBA /* View */,
+				1B34B9C11F34BDBE000EDCBA /* ViewController */,
 				1BC7FA4B1F32CF4A00702713 /* Supporting Files */,
 			);
 			path = "iPulent Search";
@@ -296,7 +309,6 @@
 			files = (
 				1BC7FA591F32DB7900702713 /* iTunesSearchItem.swift in Sources */,
 				1BC7FA531F32D19A00702713 /* AlbumViewController.swift in Sources */,
-				1BC7FA511F32D17300702713 /* SearchViewController.swift in Sources */,
 				1BF2CA601F33CA6400D588A0 /* SearchTableViewController.swift in Sources */,
 				1BC7FA561F32D89200702713 /* iTunesAPIConnection.swift in Sources */,
 				1B38B5221F33952B001D8205 /* iTunesResult.swift in Sources */,

@@ -15,6 +15,7 @@ class ResultTableViewCell: UITableViewCell {
     @IBOutlet weak var artistName: UILabel!
     @IBOutlet weak var albumName: UILabel!
     @IBOutlet weak var songName: UILabel!
+    var albumURL: URL!
     
     var searchItem: iTunesSearchItem?{
         didSet{
@@ -26,6 +27,7 @@ class ResultTableViewCell: UITableViewCell {
         artistName?.text = searchItem?.artistName
         albumName?.text = searchItem?.collectionName
         songName?.text = searchItem?.trackName
+        albumURL = searchItem?.collectionViewUrl
         
         if let albumImageURL = searchItem?.artworkUrl100 {
             // FIXME: Blocks main thread
@@ -35,6 +37,5 @@ class ResultTableViewCell: UITableViewCell {
         } else {
             albumCover?.image = nil
         }
-    }
-    
+    }    
 }

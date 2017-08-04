@@ -17,9 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="4o3-Ue-ujJ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Result" rowHeight="88" id="etm-8V-kvr" customClass="ResultTableViewCell" customModule="iPulent_Search" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="88"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="etm-8V-kvr" id="uEK-Ax-yq9">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
@@ -83,6 +88,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ujK-9M-3Fx"/>
+                    <connections>
+                        <outlet property="searchBar" destination="4o3-Ue-ujJ" id="swP-2u-fiI"/>
+                        <segue destination="St3-ef-E4c" kind="showDetail" identifier="ViewAlbum" id="v84-x7-7zQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uaB-ag-CJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController {
+class SearchTableViewController: UITableViewController, UISearchBarDelegate{
 
     // Define the MODEL
     private var searchResult = iTunesResult() {
@@ -18,11 +18,22 @@ class SearchTableViewController: UITableViewController {
     }
     var searchText: String?{
         didSet{
-            //searchResult = iTunesResults(resultCount:0,results:[])
+            searchBar?.text = searchText
+            searchBar?.resignFirstResponder()
             tableView.reloadData()
             searchRequest()
             title = searchText
         }
+    }
+    
+    @IBOutlet weak var searchBar: UISearchBar! {
+        didSet{
+            searchBar.delegate = self
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchText = searchBar.text
     }
     
     private func searchRequest() {
@@ -75,6 +86,18 @@ class SearchTableViewController: UITableViewController {
         }
         
         return cell
+    }
+
+    func prepare(for segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "ViewAlbum"{
+            let albumVC = segue.destination as! AlbumViewController
+            if let sender = sender as? SearchTableViewController{
+                let rowSelected = tableView.indexPathForSelectedRow?.item
+                print(searchResult
+                )
+            }
+            
+        }
     }
 
 
