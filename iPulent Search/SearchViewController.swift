@@ -10,7 +10,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
-    var searchResult = iTunesResults(resultCount:0,results:[])
+    var searchResult = iTunesResult()
     
     override func viewDidLoad() {
         super.viewDidLoad()

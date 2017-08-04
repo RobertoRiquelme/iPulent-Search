@@ -13,11 +13,11 @@ import Foundation
 // Requirements:
 //
 struct iTunesSearchItem: Codable{
-    let kind: String
-    let artistName: String
-    let collectionName: String
-    let trackName: String
-    let collectionViewUrl: URL // Album URL
-    let artworkUrl100: URL  
+    var kind: String
+    var artistName: String
+    var collectionName: String
+    var trackName: String
+    var collectionViewUrl: URL // Album URL
+    var artworkUrl100: URL
 }
 

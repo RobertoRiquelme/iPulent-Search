@@ -17,9 +17,10 @@ class iTunesAPIConnection{
     private let mediaType = "music"
     
     
-    func doSearch(for query: String, completion: @escaping (iTunesResults) -> ()) {
+    func doSearch(for query: String, completion: @escaping (iTunesResult) -> ()) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        let queryTerm = "term=\(query)"
+        let queryWithAllowedChars = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!.lowercased()
+        let queryTerm = "term=\(queryWithAllowedChars)"
         let queryMedia = "mediaType=\(mediaType)"
         let queryLimit = "limit=\(limit)"
         
@@ -27,7 +28,7 @@ class iTunesAPIConnection{
         if let url = URL(string: "\(baseURL)\(queryTerm)&\(queryMedia)&\(queryLimit)") {
             URLSession.shared.invalidateAndCancel()
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                var result = iTunesResults(resultCount: 0, results: [])
+                var result = iTunesResult()
                 if error != nil {
                     print(error.debugDescription)
                     //TODO: Connection error
@@ -41,7 +42,7 @@ class iTunesAPIConnection{
                     }
                     if let usableData = data {
                         do{
-                            result =  try JSONDecoder().decode(iTunesResults.self, from: usableData)
+                            result =  try JSONDecoder().decode(iTunesResult.self, from: usableData)
                         } catch {
                             print(error)
                         }
