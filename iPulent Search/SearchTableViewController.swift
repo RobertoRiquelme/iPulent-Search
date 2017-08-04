@@ -39,7 +39,9 @@ class SearchTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchText = "Pink"
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
+        searchText = "Pink Floyd"
         searchRequest()
 
         // Uncomment the following line to preserve selection between presentations
@@ -67,10 +69,11 @@ class SearchTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Result", for: indexPath)
 
-        // Configure the cell...
         let result =  searchResult.results[indexPath.row]
-        cell.textLabel?.text = result.artistName
-        cell.detailTextLabel?.text = result.collectionName
+        if let resultCell = cell as? ResultTableViewCell {
+            resultCell.searchItem = result
+        }
+        
         return cell
     }
 

@@ -18,6 +18,7 @@
 		1BC7FA561F32D89200702713 /* iTunesAPIConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA551F32D89200702713 /* iTunesAPIConnection.swift */; };
 		1BC7FA591F32DB7900702713 /* iTunesSearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA581F32DB7900702713 /* iTunesSearchItem.swift */; };
 		1BF2CA601F33CA6400D588A0 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2CA5F1F33CA6400D588A0 /* SearchTableViewController.swift */; };
+		1BF2CA621F34102600D588A0 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2CA611F34102600D588A0 /* ResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		1BC7FA551F32D89200702713 /* iTunesAPIConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPIConnection.swift; sourceTree = "<group>"; };
 		1BC7FA581F32DB7900702713 /* iTunesSearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchItem.swift; sourceTree = "<group>"; };
 		1BF2CA5F1F33CA6400D588A0 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		1BF2CA611F34102600D588A0 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				1BC7FA541F32D56B00702713 /* Util */,
 				1BC7FA4C1F32CFBA00702713 /* Main.storyboard */,
 				1BF2CA5F1F33CA6400D588A0 /* SearchTableViewController.swift */,
+				1BF2CA611F34102600D588A0 /* ResultTableViewCell.swift */,
 				1BC7FA521F32D19A00702713 /* AlbumViewController.swift */,
 				1BC7FA501F32D17300702713 /* SearchViewController.swift */,
 				1BC7FA4B1F32CF4A00702713 /* Supporting Files */,
@@ -297,6 +300,7 @@
 				1BF2CA601F33CA6400D588A0 /* SearchTableViewController.swift in Sources */,
 				1BC7FA561F32D89200702713 /* iTunesAPIConnection.swift in Sources */,
 				1B38B5221F33952B001D8205 /* iTunesResult.swift in Sources */,
+				1BF2CA621F34102600D588A0 /* ResultTableViewCell.swift in Sources */,
 				1BC7FA1E1F32CF0000702713 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
