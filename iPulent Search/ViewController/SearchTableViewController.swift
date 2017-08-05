@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController, UISearchBarDelegate{
+class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
     // Define the MODEL
     private var searchResult = iTunesResult() {
@@ -88,13 +88,17 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate{
         return cell
     }
 
-    func prepare(for segue: UIStoryboardSegue, sender: AnyObject!) {
+    var selectedURL: URL!
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedURL = searchResult.results[indexPath.row].collectionViewUrl
+        performSegue(withIdentifier: "ViewAlbum", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewAlbum"{
-            let albumVC = segue.destination as! AlbumViewController
-            if let sender = sender as? SearchTableViewController{
-                let rowSelected = tableView.indexPathForSelectedRow?.item
-                print(searchResult
-                )
+            if let albumViewController = segue.destination as? AlbumViewController {
+                    albumViewController.albumURL = selectedURL
             }
             
         }
