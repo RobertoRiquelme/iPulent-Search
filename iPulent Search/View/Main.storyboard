@@ -141,6 +141,20 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AlbumId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lg-dA-cGb">
+                                <rect key="frame" x="37" y="182" width="322" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TrackList" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ph7-3L-U6G">
+                                <rect key="frame" x="37" y="237" width="291" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -155,6 +169,8 @@
                         <outlet property="albumCover" destination="HOb-eQ-NMX" id="tkd-UT-ING"/>
                         <outlet property="albumName" destination="nIq-By-XSF" id="kLA-Rf-JCZ"/>
                         <outlet property="artistName" destination="epI-wk-YfG" id="RIO-gI-dPU"/>
+                        <outlet property="collectionId" destination="0Lg-dA-cGb" id="v0V-Bq-gWy"/>
+                        <outlet property="trackList" destination="Ph7-3L-U6G" id="bMv-UT-3aZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXQ-mQ-foq" userLabel="First Responder" sceneMemberID="firstResponder"/>

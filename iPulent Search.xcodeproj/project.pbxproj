@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B3128E71F36E14A0010757B /* iTunesAlbumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3128E61F36E14A0010757B /* iTunesAlbumResult.swift */; };
+		1B3128E91F36E1700010757B /* iTunesAlbumItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3128E81F36E1700010757B /* iTunesAlbumItem.swift */; };
 		1B38B5221F33952B001D8205 /* iTunesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38B5211F33952B001D8205 /* iTunesResult.swift */; };
 		1BC7FA1E1F32CF0000702713 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7FA1D1F32CF0000702713 /* AppDelegate.swift */; };
 		1BC7FA251F32CF0000702713 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7FA241F32CF0000702713 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B3128E61F36E14A0010757B /* iTunesAlbumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAlbumResult.swift; sourceTree = "<group>"; };
+		1B3128E81F36E1700010757B /* iTunesAlbumItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAlbumItem.swift; sourceTree = "<group>"; };
 		1B38B5211F33952B001D8205 /* iTunesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesResult.swift; sourceTree = "<group>"; };
 		1BC7FA1A1F32CF0000702713 /* iPulent Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iPulent Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC7FA1D1F32CF0000702713 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 			children = (
 				1BC7FA581F32DB7900702713 /* iTunesSearchItem.swift */,
 				1B38B5211F33952B001D8205 /* iTunesResult.swift */,
+				1B3128E61F36E14A0010757B /* iTunesAlbumResult.swift */,
+				1B3128E81F36E1700010757B /* iTunesAlbumItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,8 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B3128E91F36E1700010757B /* iTunesAlbumItem.swift in Sources */,
 				1BC7FA591F32DB7900702713 /* iTunesSearchItem.swift in Sources */,
 				1BC7FA531F32D19A00702713 /* AlbumViewController.swift in Sources */,
+				1B3128E71F36E14A0010757B /* iTunesAlbumResult.swift in Sources */,
 				1BF2CA601F33CA6400D588A0 /* SearchTableViewController.swift in Sources */,
 				1BC7FA561F32D89200702713 /* iTunesAPIConnection.swift in Sources */,
 				1B38B5221F33952B001D8205 /* iTunesResult.swift in Sources */,
