@@ -14,12 +14,12 @@ DELIVERABLES (Iterative MVPs):
 * [x] Album Detail ViewController
 * [x] Create segues
 * [x] WKWebView as Album detail
-* [ ] Create detail screen
-* [ ] Feed detail screen with album data
+* [x] Create detail screen
+* [x] Feed detail screen with album data
     * Art 100x100
     * Album name
     * Band name
-    * Song list
+    * Song list (print JSON)
 * [ ] Pagination
 * [ ] Locally store searches in case of no internet connection
 * [ ] Album Song preview
