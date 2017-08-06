@@ -88,17 +88,18 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         return cell
     }
 
-    var selectedURL: URL!
+    var selectedCell: iTunesSearchItem!
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedURL = searchResult.results[indexPath.row].collectionViewUrl
+        selectedCell = searchResult.results[indexPath.row]
         performSegue(withIdentifier: "ViewAlbum", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewAlbum"{
             if let albumViewController = segue.destination as? AlbumViewController {
-                    albumViewController.albumURL = selectedURL
+                albumViewController.myiTunesResult = selectedCell
+                print("*RR* CELL SELECTED: \(selectedCell)")
             }
             
         }

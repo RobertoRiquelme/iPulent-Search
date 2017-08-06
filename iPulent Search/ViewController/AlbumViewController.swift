@@ -13,30 +13,32 @@ class AlbumViewController: UIViewController, WKUIDelegate {
 
     //MODEL
     
-    var albumURL: URL!
-    
-    @IBOutlet weak var uiNavigationBar: UINavigationItem!
-    var webView: WKWebView!
-    
-    override func loadView() {
+    var myiTunesResult: iTunesSearchItem!
 
-        webView = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
-        webView.uiDelegate = self
-        view = webView
-    }
-    
-    @objc func goBack(){
-        self.navigationController?.popViewController(animated: true)
-    }
+    @IBOutlet weak var albumCover: UIImageView!
+    @IBOutlet weak var albumName: UILabel!
+    @IBOutlet weak var artistName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Album Detail"
+        self.navigationItem.backBarButtonItem?.target =  self
         updateUI()
     }
     
     func updateUI(){
-        webView.load(URLRequest(url: albumURL))
+        artistName?.text = myiTunesResult?.artistName
+        albumName?.text = myiTunesResult?.collectionName
+        //songName?.text = myiTunesResult?.trackName
+        //albumURL = myiTunesResult?.collectionViewUrl
+        
+        if let albumImageURL = myiTunesResult?.artworkUrl100 {
+            // FIXME: Blocks main thread
+            if let imageData = try? Data(contentsOf: albumImageURL){
+                albumCover?.image = UIImage(data: imageData)
+            }
+        } else {
+            albumCover?.image = nil
+        }
     }
-    
 }
